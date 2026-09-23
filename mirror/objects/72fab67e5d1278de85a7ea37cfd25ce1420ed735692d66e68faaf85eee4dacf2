@@ -1,0 +1,2 @@
+import{a as o}from"https://app.framerstatic.com/chunk-2FCXHKEL.mjs";import{e}from"https://app.framerstatic.com/chunk-WLHSDIGQ.mjs";var t=e(o());function n(r){return(0,t.jsx)("svg",{role:"presentation",xmlns:"http://www.w3.org/2000/svg",width:"12",height:"12",viewBox:"0 0 12 12",...r,children:(0,t.jsx)("path",{d:"M2 4.5l4 4 4-4",fill:"transparent",strokeWidth:"1.5",stroke:"currentColor",strokeLinecap:"round"})})}export{n as a};
+//# sourceMappingURL=https://app.framerstatic.com/chunk-JQQVRMNM.mjs.map

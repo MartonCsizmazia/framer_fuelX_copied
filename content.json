@@ -1,0 +1,477 @@
+{
+  "texts": [
+    {
+      "selector": ".framer-f97a75 a",
+      "name": "Menu Item",
+      "text": "Home 01"
+    },
+    {
+      "selector": ".framer-jaqift p",
+      "name": "",
+      "text": "Home"
+    },
+    {
+      "selector": ".framer-pkbbmf p",
+      "name": "",
+      "text": "01"
+    },
+    {
+      "selector": ".framer-1ohvfrk a",
+      "name": "Menu Item",
+      "text": "Portfolio 02"
+    },
+    {
+      "selector": ".framer-1wi0jjy p",
+      "name": "",
+      "text": "Portfolio"
+    },
+    {
+      "selector": ".framer-1jwnnuu p",
+      "name": "",
+      "text": "02"
+    },
+    {
+      "selector": ".framer-1riq91f a",
+      "name": "Menu Item",
+      "text": "About 03"
+    },
+    {
+      "selector": ".framer-1h82uqq p",
+      "name": "",
+      "text": "About"
+    },
+    {
+      "selector": ".framer-8bufn2 p",
+      "name": "",
+      "text": "03"
+    },
+    {
+      "selector": ".framer-mpk7y9 a",
+      "name": "Menu Item",
+      "text": "Contact 04"
+    },
+    {
+      "selector": ".framer-17425ws p",
+      "name": "",
+      "text": "Contact"
+    },
+    {
+      "selector": ".framer-10ic2jn p",
+      "name": "",
+      "text": "04"
+    },
+    {
+      "selector": ".framer-J6Nvq a",
+      "name": "Primary",
+      "text": "Meet the CEO Lousiana KD6 CEO"
+    },
+    {
+      "selector": ".framer-1rvi8mf p",
+      "name": "",
+      "text": "Meet the CEO"
+    },
+    {
+      "selector": ".framer-25m7p7 p",
+      "name": "",
+      "text": "Lousiana KD6"
+    },
+    {
+      "selector": ".framer-90m29c p",
+      "name": "",
+      "text": "CEO"
+    },
+    {
+      "selector": ".framer-1kj30u2 p",
+      "name": "",
+      "text": "Pick a plan, submit a job request,"
+    },
+    {
+      "selector": ".framer-kct57c p",
+      "name": "",
+      "text": "within 24 hours."
+    },
+    {
+      "selector": ".framer-ej9q0 a",
+      "name": "Light",
+      "text": "Explore Now"
+    },
+    {
+      "selector": ".framer-1500qjj p",
+      "name": "",
+      "text": "Videography"
+    },
+    {
+      "selector": ".framer-10p4pga p",
+      "name": "",
+      "text": "Branding"
+    },
+    {
+      "selector": ".framer-14wylbx p",
+      "name": "",
+      "text": "© 2025"
+    },
+    {
+      "selector": ".framer-12343im p",
+      "name": "",
+      "text": "19'"
+    },
+    {
+      "selector": ".framer-r9rcrt p",
+      "name": "",
+      "text": "(Pre)"
+    },
+    {
+      "selector": ".framer-mkhvv2 p",
+      "name": "",
+      "text": "Igniting ideas with precision and intentional design. Fuel transforms raw creativity into structured visual systems that shape brands and elevate digital experiences."
+    },
+    {
+      "selector": ".framer-1d63bij p",
+      "name": "",
+      "text": "(+Post)"
+    },
+    {
+      "selector": ".framer-1l1ky8t p",
+      "name": "",
+      "text": "Driven by bold aesthetics and functional simplicity. Fuel blends modern form with purposeful detail, delivering refined experiences that push brands forward."
+    },
+    {
+      "selector": ".framer-hb0zvv p",
+      "name": "",
+      "text": "(=Results)"
+    },
+    {
+      "selector": ".framer-10z0auw p",
+      "name": "",
+      "text": "New clients"
+    },
+    {
+      "selector": ".framer-107pwa2 p",
+      "name": "",
+      "text": "15"
+    },
+    {
+      "selector": ".framer-1e9yo0b p",
+      "name": "",
+      "text": "Success rate"
+    },
+    {
+      "selector": ".framer-llj85y p",
+      "name": "",
+      "text": "100%"
+    },
+    {
+      "selector": ".framer-105k73z a",
+      "name": "Dark",
+      "text": "Explore Now"
+    },
+    {
+      "selector": ".framer-17kowys h4",
+      "name": "",
+      "text": "FX-25'"
+    },
+    {
+      "selector": ".framer-mdujwd a",
+      "name": "Dark",
+      "text": "Join Us Now"
+    },
+    {
+      "selector": ".framer-g91GY a",
+      "name": "Primary",
+      "text": "See all (07)"
+    },
+    {
+      "selector": ".framer-b4smq1 p",
+      "name": "",
+      "text": "See all (07)"
+    },
+    {
+      "selector": ".framer-1hcvydn a",
+      "name": "Light",
+      "text": "Explore More"
+    },
+    {
+      "selector": ".framer-1j70vre p",
+      "name": "",
+      "text": "Seamless CMS and organization"
+    },
+    {
+      "selector": ".framer-yfxab6 p",
+      "name": "",
+      "text": "Dedicated support for revisions"
+    },
+    {
+      "selector": ".framer-6jWyo a",
+      "name": "Light",
+      "text": "Create a free website with Framer, the website builder loved by startups, designers and agencies."
+    },
+    {
+      "selector": ".framer-19yaanm p",
+      "name": "",
+      "text": "Create a free website with Framer, the website builder loved by startups, designers and agencies."
+    }
+  ],
+  "images": [
+    {
+      "selector": ".framer-1emrrf1 img",
+      "src": "https://framerusercontent.com/images/hSHVIIYtrGfgpDljXoyCyDkfE.png?width=1080&height=617",
+      "alt": "Women in Orange BG"
+    },
+    {
+      "selector": ".framer-inv3xn img",
+      "src": "https://framerusercontent.com/images/igV5Zp5vOf75Co9CAClwajll0.png?width=296&height=55",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-1hy4ufi img",
+      "src": "https://framerusercontent.com/images/wFRJn1NkdVZsLrogcfZqK9CfE.png?width=896&height=830",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-40utpw img",
+      "src": "https://framerusercontent.com/images/vHwYuFX3wPjx3PFeXrRkO4wfztA.png?width=4260&height=668",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-5593zm img",
+      "src": "https://framerusercontent.com/images/mrONGfTFus0kct22YjoSh0JjU.png?width=2048&height=3640",
+      "alt": "Men Red BG"
+    },
+    {
+      "selector": ".framer-1atv9y3 img",
+      "src": "https://framerusercontent.com/images/4Zx7DVBTo5PGL5e1p7CD0XPVHqU.png?width=302&height=64",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-9weVr img",
+      "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg?arrow=left",
+      "alt": "Back Arrow"
+    },
+    {
+      "selector": ".framer-7pdvpy img",
+      "src": "https://framerusercontent.com/images/JQZOV1weNouMXqzxyX8EWnm7zEw.png?width=1392&height=752",
+      "alt": "Man"
+    },
+    {
+      "selector": ".framer-k99ub img",
+      "src": "https://framerusercontent.com/images/JQZOV1weNouMXqzxyX8EWnm7zEw.png?width=1392&height=752",
+      "alt": "Man"
+    },
+    {
+      "selector": ".framer-985gzq img",
+      "src": "https://framerusercontent.com/images/XfjtzmccZPHvD68yhm9WnkoDQ.png?width=1024&height=1024",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-gh121n img",
+      "src": "https://framerusercontent.com/images/4lJy6CZV8T9kSyNv3RKwekdOjnU.png?width=896&height=1280",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-66vj5q img",
+      "src": "https://framerusercontent.com/images/GWbDxRwp39ZkrSjQVPc6IjmS8us.png?width=1280&height=896",
+      "alt": "Woman Beach"
+    },
+    {
+      "selector": ".framer-x2rok7 img",
+      "src": "https://framerusercontent.com/images/9KKvuDkNH8D0g7hq1fUdqCWs.png?width=896&height=1280",
+      "alt": "Man Hoodie"
+    },
+    {
+      "selector": ".framer-6gvhj2 img",
+      "src": "https://framerusercontent.com/images/aL0GG5D3njIn3Q6555V3SUL4k.svg?width=76&height=16",
+      "alt": ""
+    },
+    {
+      "selector": ".framer-1met6yp img",
+      "src": "https://framerusercontent.com/images/ykB2unblGBc4DohSe1vhH0DUD4.png?width=1024&height=1024",
+      "alt": "Women Side Pose"
+    },
+    {
+      "selector": ".framer-c86d3i img",
+      "src": "https://framerusercontent.com/images/3EMr1NhuWwBtVXlyMEIByWDH2Q.png?width=1408&height=768",
+      "alt": "Woman Front"
+    },
+    {
+      "selector": ".framer-1r8ly6j img",
+      "src": "https://framerusercontent.com/images/NNTodPsX12UvYBugIWgJ0QL38PU.png?width=832&height=1248",
+      "alt": "Woman"
+    },
+    {
+      "selector": ".framer-17c28bu img",
+      "src": "https://framerusercontent.com/images/dP6MHfBLig8cUKuvoJeRJF5Z8.png?width=1280&height=896",
+      "alt": "Watch"
+    },
+    {
+      "selector": ".framer-facib3 img",
+      "src": "https://framerusercontent.com/images/G891sPJdh93gPfGSBboEt88Now.png?width=768&height=1408",
+      "alt": "Villa"
+    },
+    {
+      "selector": ".framer-k573g7 img",
+      "src": "https://framerusercontent.com/images/aVOxaW9TAd0obDqqJbHz7JTt7h8.png?width=896&height=1280",
+      "alt": "Women Orange BG"
+    },
+    {
+      "selector": ".framer-x0z1tq img",
+      "src": "https://framerusercontent.com/images/vSMr1Zfuh0b2i7lq2yOMx58uxs.png?width=768&height=1408",
+      "alt": "Woman Close Up"
+    },
+    {
+      "selector": ".framer-rr2m8y img",
+      "src": "https://framerusercontent.com/images/WQ7hN14i6MTMqvTt8ieID7j9YbY.png?scale-down-to=512&width=1024&height=1024",
+      "alt": "Curly Woman"
+    },
+    {
+      "selector": ".framer-lephe8 img",
+      "src": "https://framerusercontent.com/images/71YDGBsigsdGanJvkYBelFcVI.png?width=3195&height=501",
+      "alt": ""
+    }
+  ],
+  "styles": {
+    "fontFamily": "",
+    "customCSS": ""
+  },
+  "sections": [
+    {
+      "selector": ".framer-1u6a2tv",
+      "name": "Hero",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-tU76Z",
+      "name": "Primary",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-tU76Z",
+      "name": "Moblie Closed",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-c4hy5j",
+      "name": "About",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-1u94ioe",
+      "name": "Overlap Detailing",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-9weVr",
+      "name": "Desktop",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-9weVr",
+      "name": "Tablet",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-9weVr",
+      "name": "Phone",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-6cp5dy",
+      "name": "Portfolio",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-mdkm87",
+      "name": "Services",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-38xvkj",
+      "name": "Overlap Detailing",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-pb4spx",
+      "name": "Pricing",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-xrkhdb",
+      "name": "Overlap Detailing",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-mvoegw",
+      "name": "Testimonial",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-1mqikni",
+      "name": "Archive",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-LkKYy",
+      "name": "L",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-LkKYy",
+      "name": "M",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-LkKYy",
+      "name": "S",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-1eqh8eh",
+      "name": "Stats",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-7ml6qo",
+      "name": "Article",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-jdAJs",
+      "name": "Desktop",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-jdAJs",
+      "name": "Phone",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-jdAJs",
+      "name": "Tablet",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-k6SJ4",
+      "name": "Desktop",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-1cld8zb",
+      "name": "Overlap Detailing",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-k6SJ4",
+      "name": "Phone",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-k6SJ4",
+      "name": "Tablet",
+      "hidden": false
+    },
+    {
+      "selector": ".framer-1cld8zb",
+      "name": "Overlap Detailing",
+      "hidden": false
+    }
+  ]
+}
