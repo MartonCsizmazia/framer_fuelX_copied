@@ -1,0 +1,54 @@
+/* Recovered from the "Stats" section (.framer-1eqh8eh). */
+
+.stats {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 24px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 810px) {
+  .stats {
+    gap: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .stats {
+    gap: 110px;
+    padding-bottom: 120px;
+  }
+}
+
+.stats__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1440px;
+}
+.stats__top-line {
+  width: 100%;
+  height: 1px;
+  background: var(--color-ink-10);
+}
+
+.stats__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  gap: 110px;
+  width: 100%;
+}
+@media (max-width: 809.98px) {
+  .stats__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}

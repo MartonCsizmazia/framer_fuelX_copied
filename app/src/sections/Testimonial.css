@@ -1,0 +1,19 @@
+/* Recovered from the "Testimonial" section (.framer-mvoegw). */
+
+.testimonial {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 110px;
+  padding: 24px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 810px) {
+  .testimonial {
+    padding-bottom: 120px;
+  }
+}

@@ -1,0 +1,234 @@
+/* Recovered from the inline Hero markup in the "Home" page component
+   (Kw2gnNxC1Naa8m_....mjs) and its rules in the SSR stylesheet
+   (.framer-1u6a2tv and descendants). */
+
+.hero-wrapper {
+  position: relative;
+  /* Just a flow spacer reserving scroll height — .hero itself is
+     position:fixed (see below), taken out of flow entirely, so nothing
+     needs to be tall enough to give sticky "pin room". Verified directly
+     against the mirror: the very next section's top sits at exactly 100vh
+     at scroll=0 (zero extra padding), and it slides up at full scroll speed
+     immediately, while .hero stays fixed underneath it. */
+  height: 100vh;
+}
+
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Lower than the sections that follow (they're z-index:1) so they
+     unambiguously paint over the fixed Hero once scrolled into view — a
+     fixed element's stacking priority isn't reliably "loses same-z-index
+     ties to later DOM order" the way a normal in-flow/sticky element's is
+     (confirmed empirically: About painted *behind* the fixed Hero despite
+     both being z-index:1 and About being later in the DOM). Kept
+     non-negative deliberately — a negative value here pushes Hero behind
+     its own parent's stacking layer instead (also confirmed empirically:
+     the plain .hero-wrapper spacer div started painting over it). */
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  color: var(--color-paper);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero__distortion-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1199.98px) {
+  .hero__distortion-layer {
+    display: none;
+  }
+}
+
+.hero__spacer {
+  height: 70px;
+  width: 100%;
+  flex: none;
+}
+
+.hero__top {
+  position: absolute;
+  top: 193px;
+  left: 24px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1440px;
+}
+@media (max-width: 1199.98px) {
+  .hero__top {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+  }
+}
+
+.hero__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero__line {
+  max-width: 300px;
+  width: 100%;
+  white-space: pre-wrap;
+}
+.hero__dim {
+  color: var(--color-paper-50);
+}
+
+.hero__bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (max-width: 1199.98px) {
+  .hero__bottom {
+    gap: 56px;
+  }
+}
+
+.hero__services {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 30px 0 0 240px;
+}
+@media (max-width: 1199.98px) {
+  .hero__services {
+    padding: 30px 0 0;
+  }
+}
+
+.hero__details-logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 1199.98px) {
+  .hero__details-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.hero__year-details {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+@media (max-width: 1199.98px) {
+  .hero__year-details {
+    order: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.hero__lines {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  padding-bottom: 6px;
+}
+.hero__line-tick {
+  width: 1px;
+  background: var(--color-paper-50);
+  display: inline-block;
+}
+
+.hero__logo-banner {
+  width: 75%;
+  aspect-ratio: 6.38;
+  position: relative;
+}
+.hero__logo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .hero__logo-banner {
+    width: 60%;
+  }
+}
+@media (max-width: 809.98px) {
+  .hero__logo-banner {
+    width: 100%;
+    order: 0;
+  }
+}
+
+.hero__corner-mark {
+  position: absolute;
+  bottom: 323px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+}
+.hero__plus-bar {
+  position: absolute;
+  background: var(--color-paper);
+  top: 50%;
+  left: 50%;
+}
+.hero__plus-bar--h {
+  width: 16px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+.hero__plus-bar--v {
+  width: 1px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+}
+.hero__corner-mark--desktop {
+  display: none;
+}
+.hero__corner-mark--desktop-tablet {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .hero__corner-mark--desktop,
+  .hero__corner-mark--desktop-tablet {
+    display: block;
+  }
+}
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .hero__corner-mark--desktop-tablet {
+    display: block;
+  }
+}

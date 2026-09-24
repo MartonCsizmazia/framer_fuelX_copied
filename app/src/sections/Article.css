@@ -1,0 +1,38 @@
+/* Recovered from the "Article" section (.framer-7ml6qo) — a 4-column CMS
+   grid, same "Work Card"-style item as Portfolio. */
+
+.article {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  padding: 24px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 810px) {
+  .article {
+    padding-bottom: 120px;
+  }
+}
+
+.article__grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (max-width: 1199.98px) {
+  .article__grid {
+    flex-direction: column;
+  }
+}
+
+.article__slot {
+  flex: 1;
+  width: 100%;
+}

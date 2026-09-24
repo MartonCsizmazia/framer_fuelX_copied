@@ -1,0 +1,54 @@
+/*
+  Design tokens recovered verbatim from the captured Framer runtime
+  (--token-<uuid> custom properties set on <body> in the root HTML, and
+  reused throughout every component's generated CSS as
+  `var(--token-<uuid>, <fallback>)`).
+
+  These 13 are ALL of the color tokens the site defines — confirmed by
+  scanning every captured JS/CSS/HTML file for --token- declarations; no
+  light/dark variant pairs exist, this is a single fixed palette.
+
+  Raw --token-* names are kept so component CSS ported later can be pasted
+  in unmodified. Semantic aliases below them are what new components should
+  actually use/edit.
+*/
+
+:root {
+  /* raw tokens (source of truth, do not rename) */
+  --token-86dbb439-c396-48fd-926a-93eef5aacd34: #000;       /* "Black" (named in source) */
+  --token-7d46519b-7ae3-4c0a-9383-88033d4deee8: #fff;       /* "White" (named in source) */
+  --token-aac9763f-10b4-4aa7-b48b-ab766ef819dd: #00000080;  /* black @ 50% */
+  --token-33e01e0c-d060-494c-832f-507a8774ce40: #ffffff80;  /* white @ 50% */
+  --token-3b41c797-5fa1-4e2c-94df-48a4abc7b257: #00000029;  /* black @ 16% */
+  --token-b7ef8bea-3b17-4397-bd71-c76845e01632: #0000001a;  /* black @ 10% */
+  --token-3329b6e2-cd6a-4266-8782-386867866d84: #ffffff1a;  /* white @ 10% */
+  --token-fe5ad1ec-ee6b-4f04-b32a-991de61143dc: #ffffff29;  /* white @ 16% */
+  --token-9182f0fa-29d0-4eb6-8170-7db3a9f4d532: #ffffffd9;  /* white @ 85% */
+  --token-66c37500-d629-41e0-8a75-d54a632a5687: #f7f7f7;    /* light gray surface */
+  --token-3276f804-88ae-458e-ac7a-7ed927b3c137: #d1e1e8;    /* pale blue accent */
+  --token-a83649a1-3fb0-4a78-ac47-908be8944abe: #fff;       /* white (distinct token id from "White") */
+  --token-6ff13ffa-609b-49bb-b9d4-b969f2d488bd: #111;       /* near-black surface */
+
+  /* semantic aliases — edit these to re-theme the site */
+  --color-ink: var(--token-86dbb439-c396-48fd-926a-93eef5aacd34);
+  --color-paper: var(--token-7d46519b-7ae3-4c0a-9383-88033d4deee8);
+  --color-ink-50: var(--token-aac9763f-10b4-4aa7-b48b-ab766ef819dd);
+  --color-paper-50: var(--token-33e01e0c-d060-494c-832f-507a8774ce40);
+  --color-ink-16: var(--token-3b41c797-5fa1-4e2c-94df-48a4abc7b257);
+  --color-ink-10: var(--token-b7ef8bea-3b17-4397-bd71-c76845e01632);
+  --color-paper-10: var(--token-3329b6e2-cd6a-4266-8782-386867866d84);
+  --color-paper-16: var(--token-fe5ad1ec-ee6b-4f04-b32a-991de61143dc);
+  --color-paper-85: var(--token-9182f0fa-29d0-4eb6-8170-7db3a9f4d532);
+  --color-surface: var(--token-66c37500-d629-41e0-8a75-d54a632a5687);
+  --color-accent-pale: var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137);
+  --color-paper-alt: var(--token-a83649a1-3fb0-4a78-ac47-908be8944abe);
+  --color-surface-dark: var(--token-6ff13ffa-609b-49bb-b9d4-b969f2d488bd);
+}
+
+/*
+  Breakpoints (from __framer__breakpoints in the captured HTML):
+    Desktop: (min-width: 1200px)
+    Tablet:  (min-width: 810px) and (max-width: 1199.98px)
+    Phone:   (max-width: 809.98px)
+  Mirrored as JS constants in src/styles/breakpoints.ts for use in hooks/components.
+*/

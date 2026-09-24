@@ -1,0 +1,119 @@
+.cta-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cta-banner__container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--color-ink);
+  display: flex;
+  align-items: flex-end;
+}
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.cta-banner__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.cta-banner__marquee-track {
+  width: 100%;
+  overflow: hidden;
+}
+.cta-banner__marquee {
+  display: flex;
+  width: max-content;
+}
+.cta-banner__marquee-text {
+  flex: none;
+  white-space: nowrap;
+  font-family: 'BDO Grotesk Variable', sans-serif;
+  font-size: 100px;
+  font-weight: 1000;
+  line-height: 100px;
+  letter-spacing: -3px;
+  color: var(--color-paper);
+}
+@media (max-width: 809.98px) {
+  .cta-banner__marquee-text {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.5px;
+  }
+}
+
+.cta-banner__focal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+}
+.cta-banner__accent-photo {
+  width: 224px;
+  max-width: 40vw;
+  aspect-ratio: 0.69;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cta-banner__plus-mark {
+  position: absolute;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+}
+.cta-banner__plus-bar {
+  position: absolute;
+  background: var(--color-paper);
+  top: 50%;
+  left: 50%;
+}
+.cta-banner__plus-bar--h {
+  width: 16px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+.cta-banner__plus-bar--v {
+  width: 1px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 809.98px) {
+  .cta-banner__plus-mark {
+    display: none;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .cta-banner__container {
+    height: 600px;
+  }
+  .cta-banner__accent-photo {
+    width: 140px;
+  }
+}

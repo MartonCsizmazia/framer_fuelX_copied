@@ -1,0 +1,160 @@
+.testimonial-slider {
+  display: flex;
+  align-items: flex-start;
+  gap: 240px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (max-width: 1199.98px) {
+  .testimonial-slider {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.testimonial-slider__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: none;
+}
+
+.testimonial-slider__photo {
+  position: relative;
+  width: 253px;
+  height: 253px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--color-ink);
+}
+.testimonial-slider__photo img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.testimonial-slider__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  height: 16px;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.testimonial-slider__buttons {
+  display: flex;
+  gap: 10px;
+  align-self: stretch;
+}
+.testimonial-slider__buttons button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.testimonial-slider__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  min-width: 0;
+}
+
+.testimonial-slider__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+.testimonial-slider__quote {
+  margin: 0;
+  font-family: 'BDO Grotesk Variable', sans-serif;
+  font-size: 56px;
+  font-weight: 1000;
+  line-height: 56px;
+  letter-spacing: -1.7px;
+  color: var(--color-ink);
+}
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .testimonial-slider__quote {
+    font-size: 38px;
+    line-height: 38px;
+    letter-spacing: -1.2px;
+  }
+}
+@media (max-width: 809.98px) {
+  .testimonial-slider__quote {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -1.1px;
+  }
+}
+
+.testimonial-slider__name-position {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.testimonial-slider__position {
+  color: var(--color-ink-50);
+}
+
+.testimonial-slider__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-ink-10);
+}
+
+.testimonial-slider__stats {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  width: 100%;
+}
+@media (max-width: 1199.98px) {
+  .testimonial-slider__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+@media (max-width: 809.98px) {
+  .testimonial-slider__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.testimonial-slider__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.testimonial-slider__stat h6 {
+  margin: 0;
+  color: var(--color-ink);
+}
+.testimonial-slider__stat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.testimonial-slider__stat-subtitle {
+  color: var(--color-ink-50);
+}

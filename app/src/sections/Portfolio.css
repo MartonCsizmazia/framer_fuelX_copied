@@ -1,0 +1,113 @@
+/* Recovered from the "Portfolio" section (.framer-6cp5dy) and the Work Card
+   grid (.framer-mdujwd / .framer-1qmb62d / .framer-i6bunf). */
+
+.portfolio {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding: 24px 24px 120px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1199.98px) {
+  .portfolio {
+    gap: 60px;
+    padding: 24px 24px 80px;
+  }
+}
+
+.portfolio__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  gap: 24px;
+}
+@media (max-width: 1199.98px) {
+  .portfolio__bottom {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.portfolio__sidebar {
+  position: sticky;
+  top: 0;
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 244px 0 200px;
+}
+.portfolio__sidebar--right {
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width: 1199.98px) {
+  .portfolio__sidebar {
+    position: relative;
+    top: unset;
+    flex: none;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.portfolio__sidebar-title {
+  margin: 0;
+}
+.portfolio__sidebar-line {
+  width: 100%;
+  height: 1px;
+  background: var(--color-ink-16);
+}
+
+.portfolio__see-all {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-ink);
+}
+.portfolio__see-all-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.portfolio__middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 892px;
+  padding: 0 46px;
+}
+@media (max-width: 1199.98px) {
+  .portfolio__middle {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* Sticky-stack cascade: each card but the last pins at its own staggered
+   `top` (set inline per-index in Portfolio.tsx) within this shared 24px-gap
+   flex column, so later cards (later in DOM, same z-index) paint over the
+   lower part of earlier ones while a fixed sliver of each earlier card's
+   top edge keeps peeking out above — see Portfolio.tsx for the full
+   explanation. */
+.portfolio__card-slot {
+  width: 100%;
+  z-index: 1;
+}

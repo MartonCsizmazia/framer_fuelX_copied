@@ -1,0 +1,29 @@
+/* Recovered from the "Archive" section (.framer-1mqikni). */
+
+.archive {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 24px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 810px) {
+  .archive {
+    gap: 80px;
+    padding-bottom: 90px;
+  }
+}
+
+.archive__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 1440px;
+}

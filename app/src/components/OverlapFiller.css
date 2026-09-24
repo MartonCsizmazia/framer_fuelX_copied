@@ -1,0 +1,31 @@
+.overlap-filler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* True source height (.framer-38ndun etc.) — safe now that the transform
+     is continuously scroll-linked (useScroll progress) instead of a
+     fire-once whileInView tween. The old "cap to 220" hack was only needed
+     because a one-shot animation that reaches -220px once and then never
+     moves again would leave 614px of an 834px panel permanently covering
+     the section. A scroll-driven transform doesn't have that problem: it
+     keeps advancing (and reversing) with scroll position for as long as
+     the panel is in its own track range. */
+  height: 834px;
+  /* Negative, not positive: this must paint above the PREVIOUS sibling
+     section (already guaranteed by DOM order, since every section shares
+     z-index:1) but stay BELOW its own section's real content. A positive
+     z-index here would place it in the "positioned, z-index>0" paint
+     bucket, which paints after (on top of) this section's own non-positioned
+     in-flow content (heading, cards, etc.) — permanently covering it once
+     scrolled past. A negative z-index paints in the bucket right after this
+     stacking context's own background but before that in-flow content. */
+  z-index: -1;
+  pointer-events: none;
+}
+.overlap-filler--paper {
+  background: var(--color-paper-alt);
+}
+.overlap-filler--ink {
+  background: var(--color-surface-dark);
+}

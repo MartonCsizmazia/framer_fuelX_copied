@@ -1,0 +1,45 @@
+/* Recovered from the "Client Section" component (.framer-9weVr): section
+   height 330px, white background, tiles 224x168px (rgb(247,247,247), no
+   gap between them), logo images uniformly boxed to 104x16px. */
+
+.client-logos {
+  width: 100%;
+  background: var(--color-paper);
+  padding: 81px 0;
+  overflow: hidden;
+}
+
+.client-logos__track {
+  width: 100%;
+  overflow: hidden;
+}
+.client-logos__marquee {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+.client-logos__tile {
+  flex: none;
+  width: 224px;
+  height: 168px;
+  background: rgb(247, 247, 247);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-logos__logo {
+  width: 104px;
+  height: 16px;
+  object-fit: contain;
+}
+@media (max-width: 809.98px) {
+  .client-logos__tile {
+    width: 140px;
+    height: 105px;
+  }
+  .client-logos__logo {
+    width: 72px;
+    height: 11px;
+  }
+}

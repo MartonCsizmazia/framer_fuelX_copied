@@ -1,0 +1,271 @@
+/*
+  Recovered from the "Navigation Bar" (.framer-tU76Z), "Menu Items"
+  (.framer-SEtwB), "Menu Item" (.framer-TpKqM) and "CTA Card" (.framer-J6Nvq)
+  components in shared-lib.BzGWWn4k.mjs. Four Framer variants collapse to
+  three real layouts here:
+    Primary   (>=1200px): logo | menu | CTA, all visible
+    Secondary (810-1199px): logo | menu, CTA hidden
+    Mobile closed/open (<810px): logo + hamburger; open state stacks the
+      menu + CTA vertically as a full-width dropdown
+*/
+
+/* Positioned absolute within .hero (which is itself position:sticky, top:0,
+   height:100vh) so the nav stays pinned only for the duration Hero is
+   "stuck", then scrolls away with it — matching the original exactly,
+   rather than a permanently fixed navbar. */
+.navbar {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.navbar__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1392px;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar__logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 22%;
+}
+
+.navbar__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  order: 0;
+}
+.navbar__hamburger-line {
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color-paper);
+  transition: transform 0.3s ease;
+}
+
+.navbar__logo-link {
+  display: block;
+  width: 98px;
+  height: 18px;
+  order: 0;
+}
+.navbar__logo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.navbar__menu-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--color-paper);
+  cursor: pointer;
+}
+.navbar__menu-item-page {
+  position: relative;
+  display: inline-flex;
+}
+.navbar__menu-item-title {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.navbar__menu-item-underline {
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--color-paper);
+  transition: width 0.3s ease;
+}
+.navbar__menu-item-roll {
+  padding-bottom: 8px;
+}
+/* Recovered hover behaviour: hovering the nav dims the non-hovered items'
+   labels to 50% opacity ("spotlight" effect) while the hovered item's
+   underline reveals. */
+.navbar__menu:hover .navbar__menu-item-title {
+  opacity: 0.5;
+}
+.navbar__menu-item:hover .navbar__menu-item-title {
+  opacity: 1;
+}
+.navbar__menu-item:hover .navbar__menu-item-underline {
+  width: 104%;
+}
+
+.navbar__cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 22%;
+  max-width: 315px;
+  padding: 3px 8px 3px 3px;
+  border-radius: 5px;
+  background: var(--color-surface);
+  text-decoration: none;
+  color: var(--color-ink);
+}
+.navbar__cta-avatar {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 2.5px;
+  overflow: hidden;
+  background: var(--color-ink);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.navbar__cta:hover .navbar__cta-avatar {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+.navbar__cta-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2.5px;
+}
+.navbar__cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.navbar__cta-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.navbar__cta-heading {
+  max-width: 120px;
+}
+.navbar__cta-icon-track {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  color: var(--color-ink);
+}
+.navbar__cta:hover .navbar__cta-icon-track {
+  justify-content: flex-end;
+}
+.navbar__cta-name-position {
+  display: flex;
+  flex-direction: column;
+}
+.navbar__cta-name {
+  color: var(--color-ink);
+}
+.navbar__cta-position {
+  color: var(--color-ink-50);
+}
+
+/* Tablet AND Phone (<1199.98px) both use the closed/hamburger nav in the
+   source — verified against the live site directly (not just the CSS
+   dump): the "Secondary" text-menu variant is not actually reached at any
+   real viewport width on this page, only Primary (>=1200px) and Moblie
+   Closed/Mobile Open (<1200px) are. */
+@media (max-width: 1199.98px) {
+  .navbar__bar {
+    max-width: 390px;
+    padding: 24px;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 16px;
+  }
+  .navbar__bar--open {
+    background-color: var(--color-surface-dark);
+    box-shadow: 0px 22px 40px 20px var(--color-ink-50);
+  }
+  .navbar__hamburger {
+    display: inline-flex;
+    order: 1;
+  }
+  .navbar__logo-group {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar__logo-link {
+    order: 0;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    order: 1;
+  }
+  .navbar__cta {
+    display: none;
+    width: 100%;
+    max-width: none;
+    order: 3;
+  }
+  .navbar__bar--open {
+    gap: 40px;
+  }
+  .navbar__bar--open .navbar__hamburger-line:first-child {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .navbar__bar--open .navbar__hamburger-line:last-child {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  .navbar__bar--open .navbar__menu,
+  .navbar__bar--open .navbar__cta {
+    display: flex;
+  }
+  .navbar__bar--open .navbar__menu-item-title,
+  .navbar__bar--open .navbar__menu-item-roll,
+  .navbar__bar--open .navbar__cta-heading,
+  .navbar__bar--open .navbar__cta-name,
+  .navbar__bar--open .navbar__cta-icon-track {
+    color: var(--color-paper);
+  }
+  .navbar__bar--open .navbar__cta-position {
+    color: var(--color-paper-50);
+  }
+  .navbar__bar--open .navbar__menu-item-underline {
+    background: var(--color-paper);
+  }
+}
