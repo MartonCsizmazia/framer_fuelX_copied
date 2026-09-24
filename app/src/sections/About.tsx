@@ -1,9 +1,21 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Button from '../components/Button'
 import OverlapFiller from '../components/OverlapFiller'
 import SectionEyebrow from '../components/SectionEyebrow'
 import { images } from '../assets/images'
 import './About.css'
+
+// The portrait's own container stays put; scrolling instead pans the
+// (deliberately oversized, `height:150%`) image linearly inside it — no
+// spring, a direct 1:1 function of scroll progress, slower than the page's
+// own scroll speed since it only covers this many px against a full
+// viewport-heights-tall scroll range. Range must stay within the safe
+// [-220, 0] window (220px = the 150%-height image's total overflow inside
+// its 440px-tall container) or the container would show empty space at an
+// edge. -170 shows more of the subject's legs at entry; push further toward
+// -220 for even more, or back toward 0 for less.
+const ABOUT_IMAGE_PARALLAX_START = -170
 
 // Recovered inline transitions (local consts in the "Home" page chunk, not
 // the global appear-animations table): simple opacity fades triggered
@@ -20,6 +32,13 @@ const stats = [
 ]
 
 export default function About() {
+  const imageRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress: imageScrollProgress } = useScroll({
+    target: imageRef,
+    offset: ['start end', 'end start'],
+  })
+  const imageY = useTransform(imageScrollProgress, [0, 1], [ABOUT_IMAGE_PARALLAX_START, 0])
+
   return (
     <section className="about">
       <OverlapFiller color="paper" />
@@ -38,8 +57,8 @@ export default function About() {
       </div>
 
       <div className="about__bottom">
-        <motion.div className="about__image" {...fadeIn(0.6)}>
-          <img src={images.assetMrongf.src} alt="Men Red BG" />
+        <motion.div className="about__image" ref={imageRef} {...fadeIn(0.6)}>
+          <motion.img src={images.assetMrongf.src} alt="Men Red BG" style={{ y: imageY }} />
         </motion.div>
 
         <motion.div className="about__columns" {...fadeIn(1.2)}>

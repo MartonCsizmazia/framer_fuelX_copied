@@ -6,7 +6,6 @@
 .cta-banner__container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
   height: 800px;
   max-height: 80vh;
   border-radius: 5px;
@@ -17,9 +16,14 @@
 }
 .cta-banner__bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  /* Deliberately taller than the container (like About's portrait) so
+     there's room for a scroll-linked pan — see the useScroll/useTransform
+     wiring in CtaBanner.tsx. Top-aligned by default (no `bottom`/`inset`),
+     so the untransformed rest state is unchanged from before. */
+  height: 145%;
   object-fit: cover;
   opacity: 0.8;
 }
@@ -29,15 +33,23 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 0;
 }
 
+/* Bounded to exactly the rectangle the four plus-marks frame (19%/76% of
+   width, 37%/67% of height) so the marquee is only ever visible between
+   them, and edge-masked so text fades in/out fast as it crosses the
+   rectangle's left/right edges instead of hard-cutting at the clip. */
 .cta-banner__marquee-track {
-  width: 100%;
+  position: absolute;
+  top: 32%;
+  left: calc(22% - 1rem);
+  width: 57%;
+  height: 30%;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 .cta-banner__marquee {
   display: flex;
@@ -48,7 +60,7 @@
   white-space: nowrap;
   font-family: 'BDO Grotesk Variable', sans-serif;
   font-size: 100px;
-  font-weight: 1000;
+  font-weight: 400;
   line-height: 100px;
   letter-spacing: -3px;
   color: var(--color-paper);
