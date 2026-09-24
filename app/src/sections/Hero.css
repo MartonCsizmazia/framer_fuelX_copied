@@ -193,8 +193,9 @@
 }
 
 .hero__corner-mark {
+  /* `bottom` is set per-instance inline (Hero.tsx) — the four marks sit on
+     two different levels (a zigzag), not one shared line. */
   position: absolute;
-  bottom: 323px;
   z-index: 1;
   width: 16px;
   height: 16px;

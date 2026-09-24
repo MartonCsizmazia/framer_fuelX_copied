@@ -47,23 +47,28 @@ const logoBannerAppear = {
   animate: { opacity: 1, y: 0, transition: { ...springSlow, delay: 0.1 } },
 }
 
-// Corner plus-marks — ids 1bna2y5 / 7cb90 / 1mc9omt / rz2mbh, all delay 0.8
+// Corner plus-marks — ids 1bna2y5 / 7cb90 / 1mc9omt / rz2mbh, all delay 0.8.
+// They don't share one resting line: measured directly against the mirror,
+// marks 1/3 and 2/4 sit on two different levels, 106px apart (a zigzag),
+// not a single shared `bottom`.
+const CORNER_MARK_BOTTOM_LOW = 323
+const CORNER_MARK_BOTTOM_HIGH = 323 + 106
 const cornerMarks = [
-  { right: 889, from: -100, visibleAt: 'desktop' as const },
-  { right: 653, from: 100, visibleAt: 'desktop' as const },
-  { right: 417, from: -100, visibleAt: 'desktop-tablet' as const },
-  { right: 181, from: 100, visibleAt: 'desktop-tablet' as const },
+  { right: 889, bottom: CORNER_MARK_BOTTOM_LOW, from: -100, visibleAt: 'desktop' as const },
+  { right: 653, bottom: CORNER_MARK_BOTTOM_HIGH, from: 100, visibleAt: 'desktop' as const },
+  { right: 417, bottom: CORNER_MARK_BOTTOM_LOW, from: -100, visibleAt: 'desktop-tablet' as const },
+  { right: 181, bottom: CORNER_MARK_BOTTOM_HIGH, from: 100, visibleAt: 'desktop-tablet' as const },
 ]
 
 // 11 decorative ticks between "© 2025" and "19'" — all 10px tall except the
 // 6th (40px), recovered from .framer-1vt0l42 / .framer-u6rpdz.
 const lineHeights = [10, 10, 10, 10, 10, 40, 10, 10, 10, 10, 10]
 
-function PlusMark({ right, from, visibleAt }: (typeof cornerMarks)[number]) {
+function PlusMark({ right, bottom, from, visibleAt }: (typeof cornerMarks)[number]) {
   return (
     <motion.div
       className={`hero__corner-mark hero__corner-mark--${visibleAt}`}
-      style={{ right }}
+      style={{ right, bottom }}
       initial={{ opacity: 0.001, y: from }}
       animate={{ opacity: 1, y: 0, transition: { ...springSlow, delay: 0.8 } }}
     >
