@@ -32,7 +32,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.1 } }}
           viewport={{ once: true, amount: 0.01 }}
         >
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Design-forward impressive agency crafting bold visuals, structured layouts, and
+          Design-forward impressive agency crafting bold visuals, structured layouts, and
           high-impact digital 3D Swiss inspired by modern aesthetics&reg;.
         </motion.p>
       </div>
