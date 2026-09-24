@@ -26,7 +26,7 @@ const projects = [
 // final card is left in normal flow (no sticky) so it settles as the resting
 // full-size image once the stack finishes, with nothing left to cover it.
 const STACK_BASE_TOP = 50
-const STACK_STEP = 40
+const STACK_STEP = 20
 
 // Once the *next* card starts covering a card, that card should slowly
 // shrink and drift upward — slowly enough that by the time the last card has
@@ -39,6 +39,16 @@ const STACK_STEP = 40
 // arriving, i.e. at progress (i+1)/total.
 const COVER_DRIFT_Y = 46
 const COVER_SHRINK = 0.18
+
+// The caption fades out fast once its card starts being covered (same
+// `startAt` trigger as the shrink/drift above) — otherwise, since the
+// cards overlap so closely, the covered card's caption stays legible right
+// through the one covering it. Reaches 0 after just 12% of the overall
+// scroll progress past startAt, well before COVER_SHRINK/COVER_DRIFT_Y
+// finish their own much slower transitions — and reverses the same way on
+// scroll-up, since it's driven by the same continuous `progress` value.
+// Never applied to the last card (see isLast below): nothing ever covers it.
+const CAPTION_FADE_RANGE = 0.12
 
 function PortfolioCard({
   project,
@@ -56,6 +66,9 @@ function PortfolioCard({
   const startAt = (index + 1) / total
   const y = useTransform(progress, (p) => -COVER_DRIFT_Y * Math.max(0, p - startAt))
   const scale = useTransform(progress, (p) => 1 - COVER_SHRINK * Math.max(0, p - startAt))
+  const captionOpacity = useTransform(progress, (p) =>
+    Math.max(0, 1 - Math.max(0, p - startAt) / CAPTION_FADE_RANGE),
+  )
 
   const style = isLast
     ? undefined
@@ -75,6 +88,7 @@ function PortfolioCard({
         rollNo={project.rollNo}
         href={`/work/portfolio/${project.slug}`}
         image={project.image}
+        captionOpacity={isLast ? undefined : captionOpacity}
       />
     </motion.div>
   )
