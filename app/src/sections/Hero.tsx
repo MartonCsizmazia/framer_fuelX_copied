@@ -78,7 +78,21 @@ function PlusMark({ right, bottom, from, visibleAt }: (typeof cornerMarks)[numbe
   )
 }
 
-export default function Hero() {
+export interface HeroProps {
+  /** Defaults to the original hero photo, so the main page's <Hero /> call
+   * needs no changes. Used for both the visible background and the
+   * LiquidHover distortion layer, which samples the same image. */
+  backgroundImage?: { src: string; alt?: string }
+  /** Whether the background darkens as the hero scrolls out of view — an
+   * overlay fading in from transparent to ~65% black over the same scroll
+   * distance the hero itself fades out over. On by default (the main page
+   * wants this); sub-pages reusing Hero with a different background can
+   * turn it off. */
+  darkenOnScroll?: boolean
+}
+
+export default function Hero({ backgroundImage, darkenOnScroll = true }: HeroProps = {}) {
+  const bgImage = backgroundImage ?? images.bgImageHshvii
   // Framer's built-in Parallax effect, recovered exactly from the runtime:
   // y = -scrollY * (speed/100 - 1), using raw page scroll. Traced from the
   // shared-lib chunk's `Sl`/`Cl` functions. Hero's own root:
@@ -104,12 +118,17 @@ export default function Hero() {
   // viewport height) rather than read from a source constant.
   const heroOpacity = useTransform(pageScrollY, [0, 1100], [1, 0])
 
+  // Darkens the background as the hero scrolls out — same 1100px range as
+  // heroOpacity, so it's noticeably dimmer well before the whole hero has
+  // faded away. Only rendered when darkenOnScroll is true.
+  const darkenOpacity = useTransform(pageScrollY, [0, 1100], [0, 0.65])
+
   return (
     <div className="hero-wrapper">
     <motion.section className="hero" style={{ opacity: heroOpacity, y: heroParallaxY }}>
       <Navbar />
       <motion.div className="hero__bg" {...bgAppear}>
-        <img src={images.bgImageHshvii.src} alt={images.bgImageHshvii.alt || 'Hero background'} />
+        <img src={bgImage.src} alt={bgImage.alt || 'Hero background'} />
       </motion.div>
 
       {/* Desktop-only. Real-time WebGL fluid-sim distortion, recovered
@@ -119,13 +138,15 @@ export default function Hero() {
           resolution:4). */}
       <div className="hero__distortion-layer">
         <LiquidHover
-          image={images.bgImageHshvii}
+          image={bgImage}
           cursorPower={1}
           cursorSize={0.5}
           distortionPower={0.8}
           resolution={4}
         />
       </div>
+
+      {darkenOnScroll && <motion.div className="hero__darken-overlay" style={{ opacity: darkenOpacity }} aria-hidden="true" />}
 
       <div className="hero__spacer" />
 

@@ -97,6 +97,7 @@ function PortfolioCard({
 export default function Portfolio() {
   const middleRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: middleRef, offset: ['start start', 'end end'] })
+  const yearSuffix = new Date().getFullYear() % 100
 
   return (
     <section className="portfolio">
@@ -104,7 +105,7 @@ export default function Portfolio() {
 
       <div className="portfolio__bottom">
         <div className="portfolio__sidebar portfolio__sidebar--left">
-          <h4 className="text-preset-kxvc54 portfolio__sidebar-title">FX-25'</h4>
+          <h4 className="text-preset-kxvc54 portfolio__sidebar-title">FX-{yearSuffix}'</h4>
           <div className="portfolio__sidebar-line" />
           <Button title="Join Us Now" href="/contact" variant="dark" />
         </div>

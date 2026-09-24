@@ -57,6 +57,15 @@
   width: 100%;
   height: 100%;
 }
+
+.hero__darken-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  pointer-events: none;
+}
 @media (max-width: 1199.98px) {
   .hero__distortion-layer {
     display: none;
